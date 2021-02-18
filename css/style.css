@@ -44,7 +44,12 @@ ul,ol,li{
     width: 1300px; 
     margin: 0 auto; 
 }
-
+@media screen and (max-width:1300px){
+    .inner{
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
 .contents{
     padding-top: 9.750rem;
 }
@@ -55,7 +60,11 @@ button{
     background: transparent;
     border:0;
 }
-
+@media screen and (max-width: 860px){
+    html{
+        font-size: 14px;
+    }
+}
 
 #header{
     height: 80px;
@@ -87,6 +96,7 @@ button{
     padding: 0 1rem;
 
 }
+
 #header .gnb li:nth-of-type(4){
     margin-left: auto;
 }
@@ -97,6 +107,36 @@ button{
 }
 #header .gnb li:hover a{
     border-bottom: 1px solid black;
+}
+
+@media screen and (max-width: 1300px){
+    #header{
+    width: 100%;
+        padding: 0 1rem;
+}
+    #header .gnb li:last-of-type{
+    padding: 0 0 0 1rem;
+}
+}
+@media screen and (max-width: 860px){
+    #header .navi{
+        flex-direction: column;
+    }
+    #header .logo{
+        width: 100%;
+        margin-top: 1rem;
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    #header .logo img{
+        width: 120px;
+        
+    }
+    #header .gnb li:nth-of-type(1){
+    padding: 0 1rem 0 0;
+}
 }
 #visual{
     width:1300px;
@@ -165,6 +205,22 @@ border:1px solid #909090;
 #ordering .ordering_list li .txt{
     font-size: 0.9rem;
 }
+
+@media screen and (max-width: 570px){
+    #ordering .ordering_list{
+        flex-direction: column;
+    }
+    #ordering .ordering_list li{
+    width: 100%;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding: 0 4rem;
+}
+    #ordering .ordering_list li:last-of-type{
+        margin-bottom: 0;
+    }
+}
+
 #comment{
 }
 #comment .inner{
