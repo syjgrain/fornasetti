@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/custom.js" defer></script>
     <title>fornasetti</title>
 </head>
 <body>
@@ -15,16 +16,17 @@
         <nav class="navi">
             <div class="logo"><img src="img/logo-fornasetti2.svg" alt=""></div>
             <ul class="gnb">
-                <li><a href="#">ABOUT FORNASETTI</a></li>
-                <li><a href="#">E-SHOP</a></li>
-                <li><a href="#">STORE LOCATER</a></li>               
+                <li data-link="#collections">E-SHOP</li>
+                <li data-link="#about">ABOUT FORNASETTI</li>
+                <li data-link="#footer">STORE LOCATER</li>               
                 <li><a href="#"><i class="fas fa-user"></i></a></li>
                 <li><a href="#"><i class="fas fa-heart"></i></a></li>
                 <li><a href="#"><i class="fas fa-shopping-bag"></i></a></li>
             </ul>
         </nav>
+        
     </header>
-    <section id="visual" style="background-image: url(img/visual_bg.png)">
+    <section id="visual" style="background-image: url(img/visual_bg.png)" class="on">
         <div class="msg">
             <h1 class="title">
                 A SELECTION FOR <br>
@@ -38,7 +40,7 @@
         </div>
         
     </section>
-    <section id="ordering">
+    <section id="ordering" class="on">
         <div class="inner">
             <ul class="ordering_list">
                 <li>
@@ -231,7 +233,7 @@
         </div>
         
     </section>
-    <section id="atelier" class="contents">
+    <section id="about" class="contents">
         <div class="inner">
             <h2 class="section_title">FORNASETTI ATELIER</h2>
             <div class="atelier_1">
@@ -500,5 +502,11 @@
             
         </div>
     </footer>
+    <button class="arrow_up">
+       
+           <i class="fas fa-arrow-up"></i>
+       
+        
+    </button>
 </body>
 </html>

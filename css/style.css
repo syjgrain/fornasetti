@@ -100,12 +100,13 @@ button{
 #header .gnb li:nth-of-type(4){
     margin-left: auto;
 }
-#header .gnb li a{
+#header .gnb li{
     font-weight: bold;
     border-bottom: 1px solid transparent;
-
+    padding-bottom: 5px;
+    cursor: pointer;
 }
-#header .gnb li:hover a{
+#header .gnb li:hover{
     border-bottom: 1px solid black;
 }
 
@@ -163,7 +164,13 @@ button{
     font-family: var(--font-family-playfair);
     font-size: 2.8rem;
     margin-top: 30%;
-
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s;
+}
+#visual.on .title{
+    opacity: 1;
+    transform: translateY(0);
 }
 #visual .txt{
     color: var(--grey-light-color);
@@ -222,6 +229,13 @@ border:1px solid #909090;
 }
 
 #comment{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+#comment.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 #comment .inner{
     display: flex;
@@ -262,6 +276,13 @@ border:1px solid #909090;
     margin-top: -30px;
 }
 #design{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+#design.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #design .box{
@@ -399,42 +420,42 @@ border:1px solid #909090;
     grid-row: 2/3;
 }
 
-#atelier img{
+#about img{
     width: 100%;
     
 }
 
-#atelier .atelier_1{
+#about .atelier_1{
     display: flex;
     justify-content: space-between;
 }
-#atelier .atelier_1 .pic{
+#about .atelier_1 .pic{
     width: 55%;
     height:40rem;
     overflow: hidden;
 }
-#atelier .atelier_1 .pic img{
+#about .atelier_1 .pic img{
     margin-top: -100px;
 }
-#atelier .atelier_1 .txt{
+#about .atelier_1 .txt{
     width: 40%;
     display: flex;
     align-items: center;
     font-family: var(--font-family-playfair);
     font-size: 1.3rem;
 }
-#atelier .atelier_2{
+#about .atelier_2{
     display: flex;
     justify-content: space-between;
     height:54.2rem;
     margin-top:5rem;
 }
-#atelier .atelier_2 .pic{
+#about .atelier_2 .pic{
     width: 50%;
     height:100%;
     overflow: hidden;
 }
-#atelier .atelier_2 .txt{
+#about .atelier_2 .txt{
     width: 45%;
     display: flex;
     align-items: center;
@@ -444,14 +465,14 @@ border:1px solid #909090;
     font-size: 1.3rem;
     height: 100%;
 }
-#atelier .atelier_2 .txt span{
+#about .atelier_2 .txt span{
     font-weight: bold;
     font-family: var(--font-family-playfair);
     font-size: 1.9rem;
     text-align: center;
     margin-bottom: 4rem;
 }
-#atelier .main_pic{
+#about .main_pic{
     height: 30rem;
     overflow: hidden;
     margin-top: 5rem;
@@ -707,3 +728,27 @@ select::-ms-expand {
     font-size: 0.8rem;
 }
 
+.arrow_up {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: gray;
+    color: var(--color-white);
+    z-index: 100;
+    position: fixed;
+    bottom: 100px;
+    right: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--animation-duration) ease-in;
+}
+
+.arrow_up i{
+    font-size: 30px;
+    color: white;
+}
+
+.arrow_up.active{
+    opacity: 1;
+    pointer-events: auto;
+}
