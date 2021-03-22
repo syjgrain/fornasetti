@@ -316,8 +316,14 @@ border:1px solid #909090;
 
 #collections{
     margin-top: var(--section_margin);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
 }
-
+#collections.on{
+    opacity: 1;
+    transform: translateY(0);
+}
 #collections .grid-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -420,7 +426,15 @@ border:1px solid #909090;
     
     grid-row: 2/3;
 }
-
+#about{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+#about.on{
+    opacity: 1;
+    transform: translateY(0);
+}
 #about img{
     width: 100%;
     
@@ -478,26 +492,14 @@ border:1px solid #909090;
     overflow: hidden;
     margin-top: 5rem;
 }
-
-#gallery{
-    padding-bottom: calc( 9.750rem + 50px);
+#newAndSale{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
 }
-#gallery .gallery_list{
-    display: flex;
-    justify-content:space-between;
-}
-#gallery .gallery_list li{
-    height: 300px;
-    overflow: hidden;
-    width: 33%;
-    
-}
-#gallery .gallery_list li img{
-    transition: all 0.5s;
-    width: 100%;
-}
-#gallery .gallery_list li:hover img{
-    transform: scale(1.05);
+#newAndSale.on{
+    opacity: 1;
+    transform: translateY(0);
 }
 #newAndSale .message{
     margin: 0.3rem 0;
@@ -586,6 +588,35 @@ border:1px solid #909090;
 #newAndSale .sale_list li .txt{
     margin-top: 1rem;
 }
+#gallery{
+    padding-bottom: calc( 9.750rem + 50px);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+#gallery.on{
+    opacity: 1;
+    transform: translateY(0);
+}
+#gallery .gallery_list{
+    display: flex;
+    justify-content:space-between;
+}
+#gallery .gallery_list li{
+    height: 300px;
+    overflow: hidden;
+    width: 33%;
+    
+}
+#gallery .gallery_list li img{
+    transition: all 0.5s;
+    width: 100%;
+}
+#gallery .gallery_list li:hover img{
+    transform: scale(1.05);
+}
+
+
 
 #footer{
     
