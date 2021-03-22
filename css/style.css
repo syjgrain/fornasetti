@@ -53,6 +53,12 @@ ul,ol,li{
 .contents{
     padding-top: 9.750rem;
 }
+@media screen and (max-width: 570px){
+    .contents{
+        padding-top: 5rem;
+    }
+}
+
 .section_title{
     margin-bottom: 2rem;
 }
@@ -135,6 +141,9 @@ button{
         width: 120px;
         
     }
+    #header .gnb li{
+        padding-bottom: 0;
+    }
     #header .gnb li:nth-of-type(1){
     padding: 0 1rem 0 0;
 }
@@ -193,6 +202,14 @@ border:1px solid #909090;
 #visual button:hover a{
     color:white;
 }
+@media screen and (max-width: 570px){
+    #visual{
+        width:100%;
+    }
+    #visual .msg{
+        width: 100%;
+    }
+}
 #ordering{
     margin-top: 3rem;
     
@@ -218,11 +235,11 @@ border:1px solid #909090;
         flex-direction: column;
     }
     #ordering .ordering_list li{
-    width: 100%;
+        width: 100%;
         text-align: center;
         margin-bottom: 1.5rem;
         padding: 0 4rem;
-}
+    }
     #ordering .ordering_list li:last-of-type{
         margin-bottom: 0;
     }
@@ -276,6 +293,27 @@ border:1px solid #909090;
 #comment .sub img{
     margin-top: -30px;
 }
+
+@media screen and (max-width: 570px){
+    #comment .inner{
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    #comment .box{
+        width:100%;
+        height: auto;
+    }
+    
+    #comment .main{
+        width: 100%;
+        height: auto;
+    }
+    #comment .txt{
+        padding-top: 0;
+        padding-bottom: 2rem;
+        height: auto;
+    }
+}
 #design{
     opacity: 0;
     transform: translateY(50px);
@@ -314,6 +352,27 @@ border:1px solid #909090;
     font-size: 0.95rem;
 }
 
+@media screen and (max-width: 570px){
+    #design .box{
+        flex-direction: column;
+    }
+    #design .pic{
+        width:100%;
+        height: 60%;
+    }
+    #design .pic img{
+        width: 100%;
+    }
+    #design .message{
+        width: 100%;
+        height: 40%;
+        padding-left: 0;
+    }
+    #design .message .title{
+        margin: 0;
+        padding-top: 2rem;
+    }
+}
 #collections{
     margin-top: var(--section_margin);
     opacity: 0;
@@ -492,6 +551,42 @@ border:1px solid #909090;
     overflow: hidden;
     margin-top: 5rem;
 }
+
+@media screen and (max-width: 570px){
+    #about .atelier_1{
+        flex-direction: column;
+    }
+    #about .atelier_1 .pic{
+        display: none;
+    }
+    #about .atelier_1 .pic img{
+        margin-top: 0px;
+    }
+    #about .atelier_1 .txt{
+        width: 100%;
+        font-size: 1rem;
+    }
+    #about .atelier_2{
+        height:auto;
+        margin-top: 2rem;
+    }
+    #about .atelier_2 .pic{
+        display: none;
+    }
+    #about .atelier_2 .txt{
+        width: 100%;
+        font-size: 1rem;
+    }
+    #about .atelier_2 .txt span{
+        font-weight: normal;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    #about .main_pic{
+        margin-top: 2rem;
+        height: auto;
+    }
+}
 #newAndSale{
     opacity: 0;
     transform: translateY(50px);
@@ -588,6 +683,19 @@ border:1px solid #909090;
 #newAndSale .sale_list li .txt{
     margin-top: 1rem;
 }
+@media screen and (max-width: 570px){
+    #newAndSale .inner{
+        flex-direction: column;
+    }
+    
+    #newAndSale .new_item{
+        width: 100%;
+    }
+    #newAndSale .sale_item{
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
 #gallery{
     padding-bottom: calc( 9.750rem + 50px);
     opacity: 0;
@@ -617,7 +725,15 @@ border:1px solid #909090;
 }
 
 
-
+@media screen and (max-width: 570px){
+    #gallery .gallery_list{
+        flex-direction: column;
+    }
+    #gallery .gallery_list li{
+        width: 100%;
+        height: 100%;
+    }
+}
 #footer{
     
     width: 100%;
@@ -759,6 +875,10 @@ select::-ms-expand {
     text-align: center;
     font-size: 0.8rem;
 }
+@media screen and (max-width: 570px){
+    #footer .box{
+        width: 100%;}
+}
 
 .arrow_up {
     width: 60px;
@@ -783,4 +903,10 @@ select::-ms-expand {
 .arrow_up.active{
     opacity: 1;
     pointer-events: auto;
+}
+@media screen and (max-width: 570px){
+    .arrow_up {
+        right: 50px;
+        bottom:50px;
+    }
 }
